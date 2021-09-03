@@ -153,8 +153,9 @@ const reversedString = (str) => {
   let newStr = str.split('').reduce((acc, char) => {
     return char + acc 
     },'');
-    return newStr
     
+    return newStr
+
 };
 
 /* ------------------------------------------------------------------------------------------------
