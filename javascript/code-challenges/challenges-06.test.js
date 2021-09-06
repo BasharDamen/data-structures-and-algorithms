@@ -25,7 +25,7 @@ Returns: ['dyoll', 'eimaj'];
 const getNames = (arr) => {
   // Solution code here...
   let newArr = arr.map((item) => {
-    newItem = item.name.split("").reduce((acc, char) => {
+    let newItem = item.name.split("").reduce((acc, char) => {
       return char + acc;
     }, "");
     return newItem;
@@ -61,7 +61,7 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
-  newArr = arr;
+  let newArr = arr;
   newArr[newArr.length] = newArr[0]
 };
 
