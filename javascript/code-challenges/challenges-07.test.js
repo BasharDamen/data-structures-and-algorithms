@@ -141,6 +141,13 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  let newArr1=[];
+  let newArr2=[];
+  result=recipe.ingredients.map(item=>{
+   newArr1=item.slice(item.indexOf(' ')+1);
+   newArr2=newArr1.slice(newArr1.indexOf(' ')+1); 
+   return newArr2; 
+  })
   return result;
 };
 
