@@ -26,6 +26,14 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
+  starWarsArr.sort((a,b)=>{
+    if(parseInt(a.height) > parseInt(b.height) ){
+      return -1
+    }else if (parseInt(a.height) < parseInt(b.height)){
+      return 1
+    }
+  })
+  return starWarsArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,7 +45,7 @@ Write a function named removeThree that takes an index and an array. The functio
 const removeThree = (idx, arr) => {
   // Solution code here...
   let newArr = arr.splice(idx, 3);
-  return newArr;
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,8 +56,8 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
-  arr = arr.toString(" ");
-  return arr;
+  let newArr = arr.join(" ");
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -133,6 +141,13 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  let newArr1=[];
+  let newArr2=[];
+  result=recipe.ingredients.map(item=>{
+   newArr1=item.slice(item.indexOf(' ')+1);
+   newArr2=newArr1.slice(newArr1.indexOf(' ')+1); 
+   return newArr2; 
+  })
   return result;
 };
 
